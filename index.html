@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beat-ER</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Rubik+Scribble&display=swap" rel="stylesheet">
+
+
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@400;600&display=swap');
+        body {
+            font-family: "Lexend Giga", sans-serif;
+            background-color: #f8f9fa;
+        }
+       
+        .navbar {
+            background-color: #65000b;
+            background-image: linear-gradient(326deg, #65000b 0%, #d3011c 74%);;
+        }
+
+
+        .navbar .navbar-brand,
+        .navbar .nav-link {
+            color: white !important;
+            font-weight: 600;
+        }
+
+
+        .navbar .nav-link:hover {
+            color: #e0e0e0 !important;
+        }
+
+
+        .hero-section {
+            background: url('assets/beater.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.6);
+        }
+
+
+        .hero-section h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+        }
+
+
+        .tagline {
+            background-color: #d3011c ;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            display: inline-block;
+            transform: rotate(-3deg);
+        }
+
+
+        .about-section {
+        background-color: #d3011c;
+        padding: 80px 0;
+    }
+
+
+    .about-img {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 15px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .section-title {
+        font-size: 34px;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+
+
+    .section-text {
+        font-size: 18px;
+        color: white;
+        line-height: 1.8;
+        font-weight: 400;
+    }
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: none;
+            transition: transform 0.3s;
+        }
+
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+
+        .btn-success {
+            background-color:#d3011c !important;
+            border: none;
+        }
+
+
+        .card {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+
+
+        }
+
+
+        .card-text{
+            text-align: justify;
+        }
+
+
+        .text-primary{
+            color: #d3011c !important;
+        }
+     
+        .row.center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .col-md-4 {
+            margin-bottom: 20px;
+        }  
+
+
+     
+    .contact-section {
+        background-color: #f8f9fa;
+        padding: 40px 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+
+    .contact-info p {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+
+    .contact-info a {
+        color:#d3011c;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+
+    .contact-info a:hover {
+        text-decoration: underline;
+    }
+
+
+    </style>
+</head>
+<body>
+
+
+
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#">Beat-ER</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="Places" role="button" data-bs-toggle="dropdown">
+                        Functions
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#country">Heart Rate Monitor</a></li>
+                        <li><a class="dropdown-item" href="#country">Appointment Scheduler</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+<!-- Hero Section -->
+<div class="hero-section">
+    <h1>Beat-ER</h1>
+    <div class="tagline">Every Heartbeat Matters, Every Second Counts</div>
+</div>
+
+
+
+
+<div class="container mt-4 text-center">
+    <h1 class="text-primary">Available Functions:</h1>
+    <p class="lead">Effortless <b>heart rate monitoring</b> and <b>appointment scheduler</b> for better emergency care.</p>
+    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#feedbackModal">Learn More</button>
+</div>
+
+
+<div class="container mt-4 d-flex justify-content-center">
+<div class="col-md-4" id = "form">
+    <div class="card">
+        <div class="card-body">
+            <form id = "inputInfo" onsubmit="heartRateAnalyzer(event)">
+                <h5 class="card-title">Patient Information</h5>
+                <label for = "name">Name: </label><br>
+                <input type = "text" placeholder = "Enter your Name" id = "Pname" class="form-control" required>
+                <label for = "heartrate">Heart Rate (BPM): </label>
+                <input type = "number" placeholder = "Enter heart rate" id = "heartRate" class="form-control" required>
+
+
+                <button type = "submit" class="btn btn-warning mt-2">Submit</button>
+            </form>
+        </div>
+    </div>
+   </div>
+</div>
+
+
+<div class="container mt-4" id = "country">
+    <div class="row center">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="assets/heartratemon.jpg" class="card-img-top" alt="Sample Image">
+                <div class="card-body">
+                    <h5 class="card-title">Heart Rate Monitor</h5>
+                    <p class="card-text">Calculate and monitor Body Mass Index (BMI) to assess a patient's health status. Track BMI changes to maintain a healthy lifestyle and prevent potential health risks</p>
+                    <button class="btn btn-success mt-2" onclick="displayHeart()">View Patients Heart Rate</button>
+                        <div id="viewHeartRate" class="mt-3"></div>
+                        <button class="btn btn-danger mt-2" onclick="hideHeartButton()" id="heartBack" style="display: none;">Back</button>
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="card">
+                <img src="assets/appointment.jpg" class="card-img-top" alt="Sample Image">
+                <div class="card-body">
+                    <h5 class="card-title">Appointment Scheduler</h5>
+                    <p class="card-text">Efficiently manage patient flow with a real-time queue system. Reduce wait times and streamline patient check-ins for a smoother healthcare experience.</p>
+                    
+                    <button class="btn btn-warning" onclick="showAppointmentForm()">Schedule Appointment</button> 
+                    <button class="btn btn-info" onclick="displayAppointments()">View</button> 
+                    
+                    <div id="appointmentForm" style="display: none; margin-top: 10px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                        <h4>New Appointment</h4>
+                        <form onsubmit="appointmentScheduler(event)">
+                        <label>Patient Name:</label>
+                        <input type="text" id="patientName" class="form-control" required>
+                        
+                        <label>Appointment Date:</label>
+                        <input type="date" id="appointmentDate" class="form-control" required>
+        
+                        <label>Time:</label>
+                        <input type="time" id="appointmentTime" class="form-control" required>
+        
+                        <button type = "submit" class="btn btn-primary mt-2">Submit</button>
+                        <button class="btn btn-danger mt-2" onclick="hideAppointmentForm()">Cancel</button>
+                        </form>
+                    </div>
+        
+                    <div id="queueResult" class="mt-3"></div>
+                    <button class="btn btn-danger mt-2" onclick="hideAppointment()" id="queueBack" style="display: none;">Back</button>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</div>
+
+
+
+
+<!-- About Me Section -->
+<section id="about" class="about-section">
+    <div class="container">
+        <div class="row align-items-center">   
+            <div class="col-lg-6 text-center">
+                <img src="assets/crew.webp" alt="Medical Team" class="about-img">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="section-title">About <b>Beat-ER</b></h2>
+                <p class="section-text">
+                    <b>Beat-ER</b> is a <b>simple yet efficient</b> healthcare solution for  
+                    <b>monitoring heart rate</b> and <b>scheduling appointments</b>. It helps  
+                    <b>reduce wait times</b> and <b>streamline workflows</b> for a smoother experience.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Feedback Modal -->
+<div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="feedbackModalLabel">Your Feedback</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3 form-group">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3 form-group">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-3 form-group">
+                        <label for="message" class="form-label">Your Feedback</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Enter your feedback"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Submit Feedback</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container mt-5 contact-section">
+    <h2 class="text-primary text-center">Contact Us</h2>
+    <p class="text-center">Have questions? Reach out to us!</p>
+   
+    <div class="contact-info text-center mt-4" id = "contact">
+        <p><b>Email:</b> <a href="mailto:support@chique-er.com" target="_blank">support@beat-er.com</a></p>
+        <p><b>Phone:</b> <a href="tel:+639123456789" target="_blank">+63 912 345 6789</a></p>
+        <p><b>Address:</b> <a href="https://goo.gl/maps/example" target="_blank">123 Health St, Medical City, PH</a></p>
+    </div>
+</div>
+
+
+<script>
+    let patients = [100];
+    let HHR = [];
+    let LHR = [];
+    let NHR = [];
+   
+
+
+
+
+
+
+function heartRateAnalyzer(event){
+    event.preventDefault();
+    let pName = document.getElementById('Pname').value;
+    let heartRate = document.getElementById('heartRate').value;
+   
+    patients.push({name: pName, heartRate: heartRate});
+
+
+    if(heartRate > 220){
+        HHR.push({name: pName, heartRate: heartRate + " BPM"});
+    } else if (heartRate < 150){
+        LHR.push({name: pName, heartRate: heartRate + " BPM"});
+    } else{
+        NHR.push({name: pName, heartRate: heartRate + " BPM"});
+    }
+
+
+   
+    if(pName != "" && heartRate != ""){
+      alert("Information Submitted Successfully!");
+      let pName = document.getElementById('Pname').value = "";
+      let heartRate = document.getElementById('heartRate').value = "";
+    }
+
+
+
+
+}
+
+
+function displayHeart() {
+    let pHHR = "<h3>Patients with <b>High Heart Rates</b></h3>";
+    let pLHR = "<h3>Patients with <b>Low Heart Rates</b></h3>";
+    let pNHR = "<h3>Patients with <b>Normal Heart Rates</b></h3>";
+    let i = 0, j = 0, k = 0;
+
+
+
+
+    HHR.forEach(patient => {
+        if (patient.name && patient.heartRate) {
+            pHHR += `<p>${++i}. <strong>${patient.name}</strong> Heart Rate: ${patient.heartRate}</p>`;
+        }
+    });
+
+
+    LHR.forEach(patient => {
+        if (patient.name && patient.heartRate) {
+            pLHR += `<p>${++j}. <strong>${patient.name}</strong> Heart Rate: ${patient.heartRate}</p>`;
+        }
+    });
+
+
+    NHR.forEach(patient => {
+        if (patient.name && patient.heartRate) {
+            pNHR += `<p>${++k}. <strong>${patient.name}</strong> Heart Rate: ${patient.heartRate}</p>`;
+        }
+    });
+
+
+
+
+    if (i > 0) {
+        document.getElementById("viewHeartRate").innerHTML += pHHR;
+    } else {
+        document.getElementById("viewHeartRate").innerHTML += `<p>No High Heart Rate patients.</p>`;
+    }
+
+
+    if (j > 0) {
+        document.getElementById("viewHeartRate").innerHTML += pLHR;
+    } else {
+        document.getElementById("viewHeartRate").innerHTML += `<p>No Low Heart Rate patients.</p>`;
+    }
+
+
+    if (k > 0) {
+        document.getElementById("viewHeartRate").innerHTML += pNHR;
+    } else {
+        document.getElementById("viewHeartRate").innerHTML += `<p>No Normal Heart Rate patients.</p>`;
+    }
+
+
+ 
+    let heartBackButton = document.getElementById("heartBack");
+    heartBackButton.style.display = "inline-block";
+}
+
+
+
+
+function hideHeartButton() {
+    document.getElementById("viewHeartRate").innerHTML = "";
+    document.getElementById("heartBack").style.display = "none";
+}
+
+
+//Appointment
+
+let patientSched = [];
+
+function showAppointmentForm() {
+        document.getElementById("appointmentForm").style.display = "block";
+    }
+
+   
+    function hideAppointmentForm() {
+        document.getElementById("appointmentForm").style.display = "none";
+    }
+
+
+function appointmentScheduler(event) {
+    event.preventDefault();
+        let name = document.getElementById("patientName").value;
+        let date = document.getElementById("appointmentDate").value;
+        let time = document.getElementById("appointmentTime").value;
+   
+
+        if(name != "" && date != "" && time != ""){
+      alert("Information Submitted Successfully!");
+
+      let [hours, minutes] = time.split(":");
+        let period = hours >= 12 ? "PM" : "AM";
+        hours = (hours % 12) || 12;
+        let formattedTime = `${hours}:${minutes} ${period}`;
+
+        patientSched.push({ name, date, time: formattedTime });
+
+      patientSched.sort((a, b) => {
+            let dateTimeA = new Date(a.date + " " + a.time);
+            let dateTimeB = new Date(b.date + " " + b.time);
+            return dateTimeA - dateTimeB;
+        });
+
+        for (let i = 0; i < patientSched.length; i++) {
+            if (i < 5) {
+                patientSched[i].priority = "High";
+            } else {
+                patientSched[i].priority = "Low";
+            }
+        }
+
+        document.getElementById("patientName").value = "";
+        document.getElementById("appointmentDate").value = "";
+        document.getElementById("appointmentTime").value = "";
+    }
+
+}
+
+
+function displayAppointments() {
+    let queueMessage = "<h3>Scheduled Appointments:</h3>";
+
+    if (patientSched.length === 0) {
+        queueMessage += "<p>No appointments scheduled.</p>";
+    } else {
+        patientSched.forEach((patient, index) => {
+            queueMessage += `<p>${index + 1}. <strong>${patient.name}</strong> - ${patient.date} at ${patient.time} (Priority: ${patient.priority})</p>`;
+        });
+    }
+
+
+    document.getElementById("queueResult").innerHTML = queueMessage;
+    let queueBackButton = document.getElementById("queueBack");
+    queueBackButton.style.display = "inline-block";
+}
+
+function hideAppointment() {
+    document.getElementById("queueResult").innerHTML = "";
+    document.getElementById("queueBack").style.display = "none";
+}
+</script>
+
+
+
+
+<!-- Bootstrap JS (needed for dropdowns and navbar toggle) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
